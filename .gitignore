@@ -1,0 +1,41 @@
+# Xcode user data
+xcuserdata/
+
+# Xcode workspace user settings
+*.xcworkspace/xcuserdata/
+
+# Build products and intermediates
+DerivedData/
+build/
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+test_output/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Local environment and temp files
+.DS_Store
+*.swp
+*.tmp
+*.orig
+
+# Xcode generated state
+*.moved-aside
+*.xcuserstate
