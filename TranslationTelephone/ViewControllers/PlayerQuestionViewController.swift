@@ -26,15 +26,31 @@ class PlayerQuestionViewController: UIViewController {
         let code: String
     }
 
+    @IBOutlet var playerQuestionView: UIView!
+    
     @IBOutlet weak var translateButton: UIButton!
-    @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var FPSVLanguageButton: UIButton!
+    
     @IBOutlet weak var FirstPlayerStackView: UIStackView!
+    @IBOutlet weak var FPSVLabel1: UILabel!
+    @IBOutlet weak var FPSVEnglishWordChoice: UITextField!
+    @IBOutlet weak var FPSVLabel2: UILabel!
+    
+    
     @IBOutlet weak var nextPlayerStackView: UIStackView!
+    @IBOutlet weak var NPSVLabel1: UILabel!
+    @IBOutlet weak var NPSVLabel2: UILabel!
+    @IBOutlet weak var NPSVLabel3: UILabel!
+    @IBOutlet weak var NPSVLabel4: UILabel!
+    @IBOutlet weak var NPSVLanguageButton: UIButton!
+    @IBOutlet weak var NPSVLabel5: UILabel!
+    
+    
     
     @IBOutlet weak var chosenEnglishWord: UITextField!
     
-    var firstPlayerViewShown = true;
-    var doDisplayResults = false;
+    var firstPlayerViewShown = true
+    var doDisplayResults = false
     var languages: [Language] = [
         Language( title: "English", code: "en" ),
         Language( title: "Catalan", code: "ca" ),
@@ -49,8 +65,9 @@ class PlayerQuestionViewController: UIViewController {
         super.viewDidLoad()
         setupTranslationBridge()
         // Do any additional setup after loading the view.
-        populateLanguageOptions();
-        hideQuestions();
+        styleScreen()
+        populateLanguageOptions()
+        hideQuestions()
     }
     
     private func setupTranslationBridge() {
@@ -77,6 +94,22 @@ class PlayerQuestionViewController: UIViewController {
         hostingController.didMove(toParent: self)
     }
     
+    func styleScreen() {
+        FPSVLabel1.textColor = TTColor.mainText
+        FPSVLabel2.textColor = TTColor.mainText
+        FPSVEnglishWordChoice.textColor = TTColor.buttonTextColor
+        FPSVEnglishWordChoice.backgroundColor = TTColor.inputColor
+        
+        NPSVLabel1.textColor = TTColor.accentColor
+        NPSVLabel2.textColor = TTColor.mainText
+        NPSVLabel3.textColor = TTColor.mainText
+        NPSVLabel4.textColor = TTColor.mainText
+        NPSVLabel5.textColor = TTColor.mainText
+        
+        
+        playerQuestionView.backgroundColor = TTColor.backgroundColor
+    }
+    
     func populateLanguageOptions() {
         print("Populating languages")
         // Create actions for the menu
@@ -87,7 +120,7 @@ class PlayerQuestionViewController: UIViewController {
         }
 
         // Assign the menu to your button
-        languageButton.menu = UIMenu(title: "Select Language", children: menuOptions)
+        FPSVLanguageButton.menu = UIMenu(title: "Select Language", children: menuOptions)
     }
     
     func hideQuestions() {

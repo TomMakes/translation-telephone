@@ -10,22 +10,9 @@
 		ACAA1CA52F86D14200F8EF60 /* TranslationTelephone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslationTelephone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		ACAA1CB72F86D14600F8EF60 /* Exceptions for "TranslationTelephone" folder in "TranslationTelephone" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = ACAA1CA42F86D14200F8EF60 /* TranslationTelephone */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ACAA1CA72F86D14200F8EF60 /* TranslationTelephone */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				ACAA1CB72F86D14600F8EF60 /* Exceptions for "TranslationTelephone" folder in "TranslationTelephone" target */,
-			);
 			path = TranslationTelephone;
 			sourceTree = "<group>";
 		};
